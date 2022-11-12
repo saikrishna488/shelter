@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shelter Exploration</title>
+        <style>
+            body{
+                font-family: "Lucida Console", "Courier New", monospace;
+            }
+            .head{
+                background-color: #d8232a;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                margin-bottom: 0;
+            }
+            .nav{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 70px;
+            }
+            #menu{
+                height: 40px;
+                width: 40px;
+                margin-top: 10px;
+                margin-left : 40px;
+                cursor: pointer;
+            }
+            #loc{
+                margin-left: 20px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border: 1px solid black;
+                border-radius: 13px;
+                padding: 0;
+                height: 40px;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+            #gps{
+                height: 30px;
+                width: 30px;
+            }
+            h4{
+                margin-right: 10px;
+                cursor: pointer;
+            }
+            #pp{
+                background-color: #d8232a;
+                color: white;
+                height: 40px;
+                font-size: large;
+                border: 0;
+                border-radius: 13px;
+                margin-top: 10px;
+                position: absolute;
+                right: 10%;
+                cursor: pointer;
+                font-family: "Lucida Console", "Courier New", monospace;
+            }
+            #pp:hover{
+                background-color: black;
+            }
+            .menu{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 50px;
+            }
+            .opt{
+                color: #d8232a;
+                margin: 5px 20px;
+                font-size: large;
+                cursor: pointer;
+            }
+            .opt:hover{
+                color: black;
+            }
+            #label{
+                margin-top: 40px;
+            }
+            .services{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            .items{
+                width: 20%;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                margin: 10px 10px;
+                padding: 5px 10px;
+                border-radius: 7px;
+            }
+            .al{
+                height: 20px;
+                width: 20px;
+            }
+            .bot{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                right: 0;
+                left: 0;
+                height: 100px;
+                position: fixed;
+                bottom: 0;
+                background-color: white;
+                overflow: hidden;
+                
+            }
+            .it{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin: 5px 20px;
+            }
+            .al{
+                height: 20px;
+                width: 20px;
+            }
+            .middle{
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #con{
+                /* align-self: flex-start; */
+            }
+            #details{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                justify-content: center;
+            }
+            .ph{
+                width: 50%;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="head">Shelter Exploration</h1>
+        <nav class="nav">
+            <img src="menu.png" alt="" id="menu">
+            <div id="loc">
+                <h4>Select your location</h4>
+                <img src="gps.png" alt="" id="gps">
+            </div>
+            <button id="pp">Post property</button>
+        </nav>
+        <nav class="menu">
+            <p class="opt">Buy</p>
+            <p class="opt">Rent</p>
+            <p class="opt">PG</p>
+            <p class="opt">Commercial</p>
+            <p class="opt">Post Ad</p>
+        </nav>
+        <h4 id="label">Property services</h4>
+        <div class="services">
+            <div class="items">
+                <h4>Pay Rent</h4>
+                <a href="">Pay rent online with credit card & and earn cshback upto 20%</a>
+            </div>
+            <div class="items">
+                <h4>Rental Agreement</h4>
+                <a href="">Online agreement drafting and stamping</a>
+            </div>
+            <div class="items">
+                <h4>Packers and Movers</h4>
+                <a href="">Home shifting and vehicle shifting</a>
+            </div>
+            <div class="items">
+                <h4>Home Cleaning</h4>
+                <a href="">keep your home and family safe</a>
+            </div>
+        </div>
+        <div class="middle">
+            <h4 id="con">Contact Us</h4>
+            <p>For any assistance or enquiry , please feel free to reach out at us. We'd love to help</p>
+            <div id="details">
+                <p class="ph">Phone : xxxxxxxx402</p>
+                <p class="ph">Email : propertyservices@megahousing.com</p>
+            </div>
+        </div>
+        <nav class="bot">
+            <div class="it">
+                <img src="home.png" alt="" class="al">
+                <h4>Home</h4>
+            </div>
+            <div class="it">
+                <img src="search.png" alt="" class="al">
+                <h4>Search</h4>
+            </div>
+            <div class="it">
+                <img src="heart.png" alt="" class="al">
+                <h4>Shortlist</h4>
+            </div>
+            <div class="it">
+                <img src="services.png" alt="" class="al">
+                <h4>Services</h4>
+            </div>
+        </nav>
+    </body>
+</html>
