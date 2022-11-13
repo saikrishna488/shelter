@@ -126,6 +126,10 @@
                 height: 20px;
                 width: 20px;
             }
+            .alu{
+                height: 40px;
+                width: 40px;
+            }
             .middle{
                 display: flex;
                 width: 100%;
@@ -147,9 +151,67 @@
                 width: 50%;
                 text-align: center;
             }
+            .mid{
+                margin-bottom: 110px;
+
+            }
+            #search{
+                top : 0;
+                overflow: hidden;
+                position:absolute;
+                height: 100%;
+                margin: 20px 0px;
+                width: 50%;
+                background-color: white;
+                border: 1px solid black;
+            }
+            .top{
+                display : flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                margin-right: 10px;
+            }
+            .nam{
+                margin-left: 10px;
+                font-size: large;
+            }
+            .city{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                height: 40px;
+            }
+            .ci{
+                margin: 10px 10px;
+            }
+            .flat{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 10px;
+                padding: 10px 0px;
+                cursor: pointer;
+            }
         </style>
+        <script>
+            function temp() {
+                var x = document.getElementById("search");
+                x.style.display = "none";
+            }
+            function myFunction() {
+               var x = document.getElementById("search");
+               if (x.style.display === "none") {
+                 x.style.display = "block";
+               } else {
+                 x.style.display = "none";
+               }
+           }
+
+        </script>
     </head>
-    <body>
+    <body onload='temp()'>
         <h1 class="head">Shelter Exploration</h1>
         <nav class="nav">
             <img src="menu.png" alt="" id="menu">
@@ -159,38 +221,40 @@
             </div>
             <button id="pp">Post property</button>
         </nav>
-        <nav class="menu">
-            <p class="opt">Buy</p>
-            <p class="opt">Rent</p>
-            <p class="opt">PG</p>
-            <p class="opt">Commercial</p>
-            <p class="opt">Post Ad</p>
-        </nav>
-        <h4 id="label">Property services</h4>
-        <div class="services">
-            <div class="items">
-                <h4>Pay Rent</h4>
-                <a href="">Pay rent online with credit card & and earn cshback upto 20%</a>
+        <div class="mid">
+            <nav class="menu">
+                <p class="opt">Buy</p>
+                <p class="opt">Rent</p>
+                <p class="opt">PG</p>
+                <p class="opt">Commercial</p>
+                <p class="opt">Post Ad</p>
+            </nav>
+            <h4 id="label">Property services</h4>
+            <div class="services">
+                <div class="items">
+                    <h4>Pay Rent</h4>
+                    <a href="">Pay rent online with credit card & and earn cshback upto 20%</a>
+                </div>
+                <div class="items">
+                    <h4>Rental Agreement</h4>
+                    <a href="">Online agreement drafting and stamping</a>
+                </div>
+                <div class="items">
+                    <h4>Packers and Movers</h4>
+                    <a href="">Home shifting and vehicle shifting</a>
+                </div>
+                <div class="items">
+                    <h4>Home Cleaning</h4>
+                    <a href="">keep your home and family safe</a>
+                </div>
             </div>
-            <div class="items">
-                <h4>Rental Agreement</h4>
-                <a href="">Online agreement drafting and stamping</a>
-            </div>
-            <div class="items">
-                <h4>Packers and Movers</h4>
-                <a href="">Home shifting and vehicle shifting</a>
-            </div>
-            <div class="items">
-                <h4>Home Cleaning</h4>
-                <a href="">keep your home and family safe</a>
-            </div>
-        </div>
-        <div class="middle">
-            <h4 id="con">Contact Us</h4>
-            <p>For any assistance or enquiry , please feel free to reach out at us. We'd love to help</p>
-            <div id="details">
-                <p class="ph">Phone : xxxxxxxx402</p>
-                <p class="ph">Email : propertyservices@megahousing.com</p>
+            <div class="middle">
+                <h4 id="con">Contact Us</h4>
+                <p>For any assistance or enquiry , please feel free to reach out at us. We'd love to help</p>
+                <div id="details">
+                    <p class="ph">Phone : xxxxxxxx402</p>
+                    <p class="ph">Email : propertyservices@megahousing.com</p>
+                </div>
             </div>
         </div>
         <nav class="bot">
@@ -199,8 +263,8 @@
                 <h4>Home</h4>
             </div>
             <div class="it">
-                <img src="search.png" alt="" class="al">
-                <h4>Search</h4>
+                <img src="search.png" onclick="myFunction()" alt="" class="al">
+                <h4 onclick="myFunction()">Search</h4>
             </div>
             <div class="it">
                 <img src="heart.png" alt="" class="al">
@@ -211,5 +275,55 @@
                 <h4>Services</h4>
             </div>
         </nav>
+        <div id="search">
+            <p class="nam">Search</p>
+            <div class="top">
+                <p onclick="myFunction()" style="cursor: pointer; font-size: larger;">X</p>
+            </div>
+            <nav class="menu">
+                <p class="opt">Buy</p>
+                <p class="opt">Rent</p>
+                <p class="opt">PG</p>
+                <p class="opt">Commercial</p>
+                <p class="opt">Post Ad</p>
+            </nav>
+            <p class="nam">Select City/Localities</p>
+            <div class="city">
+                <button class="ci">City</button>
+                <button class="ci">+ Add more</button>
+            </div>
+            <p class="nam">Budget</p>
+            <div class="city">
+                <button class="ci">Min -</button>
+                <button class="ci">Max +</button>
+            </div>
+            <p class="nam">Property</p>
+            <div class="city">
+                <div class="flat">
+                    <img src="flat.png" alt="" class="alu">
+                    <p>Flat</p>
+                </div>
+                <div class="flat">
+                    <img src="villa.png" alt="" class="alu">
+                    <p>House/Villa</p>
+                </div>
+                <div class="flat">
+                    <img src="office.png" alt="" class="alu">
+                    <p>Comercial office space</p>
+                </div>
+                <div class="flat">
+                    <img src="shop.png" alt="" class="alu">
+                    <p>Shops /showrooms</p>
+                </div>
+            </div>
+            <p class="nam">BHK</p>
+            <div class="city">
+                <button class="ci">+1BHK</button>
+                <button class="ci">+2BHK</button>
+                <button class="ci">+3BHK</button>
+                <button class="ci">+4BHK</button>
+                <button class="ci">+5BHK</button>
+            </div>
+        </div>
     </body>
 </html>
