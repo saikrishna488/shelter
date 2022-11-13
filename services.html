@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        body{
+                font-family: "Lucida Console", "Courier New", monospace;
+            }
+            .head{
+                background-color: #d8232a;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                margin-bottom: 0;
+            }
+        .bot{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                right: 0;
+                left: 0;
+                height: 100px;
+                position: fixed;
+                bottom: 0;
+                background-color: white;
+                overflow: hidden;
+                
+            }
+            .it{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin: 5px 20px;
+                cursor: pointer;
+            }
+            .al{
+                height: 20px;
+                width: 20px;
+                cursor: pointer;
+            }
+            .middle{
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: auto auto auto;
+                align-items: center;
+                justify-content: center;
+                grid-column-gap: 20px;
+                grid-row-gap: 10px;
+                overflow: scroll;
+                margin-bottom: 120px;
+            }
+            .grid-item{
+                height: 150px;
+                width: 150px;
+                cursor: pointer;
+            }
+            .grid-item:hover{
+                border: 1px solid black;
+            }
+            #hm{
+                text-decoration: none;
+                color: black;
+            }
+            #ser{
+                text-decoration: none;
+                color: black;
+            }
+    </style>
+    <script>
+        function temp() {
+            var x = document.getElementById("search");
+            x.style.display = "none";
+        }
+        function myFunction() {
+           var x = document.getElementById("search");
+           if (x.style.display === "none") {
+             x.style.display = "block";
+           } else {
+             x.style.display = "none";
+           }
+       }
+    </script>
+</head>
+<body onload='temp()'>
+    <h1 class="head">Shelter Exploration</h1>
+    <nav class="middle">
+        <img src="homeloan.jpeg" alt="" class="grid-item">
+        <img src="payrent.jpeg" alt="" class="grid-item">
+        <img src="packers.jpeg" alt="" class="grid-item">
+        <img src="design.jpeg" alt="" class="grid-item">
+        <img src="direction.jpeg" alt="" class="grid-item">
+        <img src="pest.jpeg" alt="" class="grid-item">
+        <img src="homecleaning.jpeg" alt="" class="grid-item">
+        <img src="homeins.jpeg" alt="" class="grid-item">
+        <img src="santitization.jpeg" alt="" class="grid-item">
+    </nav>
+    <nav class="bot">
+        <div class="it">
+            <img src="home.png" alt="" class="al">
+            <a href="index.html" id="hm"><h4>Home</h4></a>
+        </div>
+        <div class="it">
+            <img src="search.png" onclick="myFunction()" alt="" class="al">
+            <h4 onclick="myFunction()">Search</h4>
+        </div>
+        <div class="it">
+            <img src="heart.png" alt="" class="al">
+            <a href="short.html" id="ser"><h4>Shortlist</h4></a>
+        </div>
+        <div class="it">
+            <img src="services.png" alt="" class="al">
+            <a href="services.html" id="ser"><h4>Services</h4></a>
+        </div>
+    </nav>
+</body>
+</html>

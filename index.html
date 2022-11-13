@@ -137,9 +137,6 @@
                 justify-content: center;
                 align-items: center;
             }
-            #con{
-                /* align-self: flex-start; */
-            }
             #details{
                 display: flex;
                 flex-direction: row;
@@ -194,6 +191,10 @@
                 padding: 10px 0px;
                 cursor: pointer;
             }
+            #ser{
+                text-decoration: none;
+                color: black;
+            }
         </style>
         <script>
             function temp() {
@@ -208,7 +209,6 @@
                  x.style.display = "none";
                }
            }
-
         </script>
     </head>
     <body onload='temp()'>
@@ -268,11 +268,11 @@
             </div>
             <div class="it">
                 <img src="heart.png" alt="" class="al">
-                <h4>Shortlist</h4>
+                <a href="short.html" id="ser"><h4>Shortlist</h4></a>
             </div>
             <div class="it">
                 <img src="services.png" alt="" class="al">
-                <h4>Services</h4>
+                <a href="services.html" id="ser"><h4>Services</h4></a>
             </div>
         </nav>
         <div id="search">

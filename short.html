@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Shortlist
+    </title>
+    <style>
+      body{
+                font-family: "Lucida Console", "Courier New", monospace;
+            }
+            .head{
+                background-color: #d8232a;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                margin-bottom: 0;
+            }
+        .bot{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                right: 0;
+                left: 0;
+                height: 100px;
+                position: fixed;
+                bottom: 0;
+                background-color: white;
+                overflow: hidden;
+                
+            }
+            .it{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin: 5px 20px;
+                cursor: pointer;
+            }
+            .al{
+                height: 20px;
+                width: 20px;
+                cursor: pointer;
+            }
+            #hm{
+                text-decoration: none;
+                color: black;
+            }
+            #ser{
+                text-decoration: none;
+                color: black;
+            }
+    </style>
+    <script>
+      function temp() {
+          var x = document.getElementById("search");
+          x.style.display = "none";
+      }
+      function myFunction() {
+         var x = document.getElementById("search");
+         if (x.style.display === "none") {
+           x.style.display = "block";
+         } else {
+           x.style.display = "none";
+         }
+     }
+  </script>
+  </head>
+<body onload='temp()'>
+
+<h1 class="head">Shelter Exploration</h1>
+<br><br>
+<form action="/action_page.php">
+  <label for="fname">ENTER NAME:</label><br>
+  <input type="text" id="fname" name="fname" value=><br>
+  <label for="lname">EMAIL-ID:</label><br>
+  <input type="text" id="lname" name="lname" value=><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the Next?Sign In button, the form-data will be sent to a page called "/SHELTHER EXPLORATION</p>
+<nav class="bot">
+  <div class="it">
+      <img src="home.png" alt="" class="al">
+      <a href="index.html" id="hm"><h4>Home</h4></a>
+  </div>
+  <div class="it">
+      <img src="search.png" onclick="myFunction()" alt="" class="al">
+      <h4 onclick="myFunction()">Search</h4>
+  </div>
+  <div class="it">
+      <img src="heart.png" alt="" class="al">
+      <a href="short.html" id="ser"><h4>Shortlist</h4></a>
+  </div>
+  <div class="it">
+      <img src="services.png" alt="" class="al">
+      <a href="services.html" id="ser"><h4>Services</h4></a>
+  </div>
+</nav>
+</body>
+</html>
+
